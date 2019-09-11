@@ -13,8 +13,8 @@ function setup(){
 }
 
 function draw(){
-	console.log('h',document.body.scrollHeight);
-	console.log('t',document.body.scrollTop);
+	console.log('h',document.getElementById("sketch-holder").scrollHeight);
+	console.log('t',document.getElementById('sketch-holder').scrollTop);
 	drawLines();
 	mult = 40 + (document.body.scrollTop/document.body.scrollHeight)*3;
 }
@@ -39,7 +39,7 @@ function drawLines() {
 		let y1 = cir.rad*Math.sin(i*conversion - (Math.PI/2));
 		let x2 = cir.rad*Math.cos(j*conversion - (Math.PI/2));
 		let y2 = cir.rad*Math.sin(j*conversion - (Math.PI/2));
-		
+
 		h = parseInt(map(i,1,mod,0,360));
 		col = "hsl(" + h + ",100%,60%)";
 		fill(col);
@@ -50,7 +50,7 @@ function drawLines() {
 		stroke(col);
 		line(x1,y1,x2,y2);
 		// attempt to make a color wheel thing...
-		
+
 		//console.log(nums[i][0],nums[i][1]);
 	}
 }
