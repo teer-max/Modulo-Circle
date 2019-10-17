@@ -1,0 +1,33 @@
+body {
+  font-family: "Helvetica", "Georgia";
+  background-color: rgb(0,0,0);
+  color: aliceblue;
+}
+
+header {
+  margin: auto;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+
+}
+ul>li {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(100,150,255);
+}
+li>a {
+  color: white;
+  text-decoration: none;
+  vertical-align: center;
+  overflow: hidden;
+}
