@@ -8,12 +8,16 @@ header {
   margin: auto;
   text-align: center;
 }
+h1 {
+  text-shadow: 1px 1px 0px rgb(51,51,51);
+}
 
 ul {
   display: flex;
   flex-flow: row wrap;
+  margin: 0px 50px;
+  justify-content: space-between;
   list-style-type: none;
-
 }
 ul>li {
   display: flex;
@@ -23,11 +27,12 @@ ul>li {
   padding: 5px;
   text-align: center;
   align-items: center;
-  background-color: rgb(100,150,255);
+  background-color: rgb(100,140,230);
+  box-shadow: 3px 3px rgb(51,51,51);
 }
 li>a {
   color: white;
+  text-shadow: 1px 1px 0px rgb(0,0,0);
   text-decoration: none;
   vertical-align: center;
-  overflow: hidden;
 }
