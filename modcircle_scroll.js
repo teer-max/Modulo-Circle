@@ -1,5 +1,5 @@
 var MAXW = 1200;
-var MAXH = 800;
+var MAXH = 1600;
 var mod = 120;
 var mult = 60;
 var inc  = 0.002;
@@ -9,13 +9,30 @@ var reverse;
 var playButton;
 var cnv;
 var prt;
-function setup() {
-	MAXW = min(windowWidth,MAXW);
-	MAXH = min(windowHeight,MAXH);
 
-	cnv = createCanvas(MAXW,MAXH);
+/*
+Much of the commented out code is related to
+the use of the sliders, buttons and input DOM
+elements.
+
+The main tool used, besides the logic behind the
+animation, is the linking of the DOM element,
+scrollHeight, with the animation. There are many
+ways to use the elements to add interactivity.
+
+I intend to work on the formatting so the
+background is formatted more aestheically.
+*/
+
+
+
+function setup() {
+
+	MAXW = windowWidth;
+	MAXH = windowHeight;
+
+	cnv = createCanvas(MAXW,1600);
 	prt = cnv.parent('sketch-holder');
-	console.log(prt)
 	/*
     modIn = createInput(mod+ "");
 	modIn.changed(updateModIn);
@@ -102,7 +119,7 @@ function drawLines() {
 	var cir = {
 		x: MAXW*0.5,
 		y: MAXH*0.5,
-		rad: 1.5*MAXH,
+		rad: 1.1*MAXH,
 	};
 
 	// background(0,150,120);
@@ -153,7 +170,6 @@ function drawLines() {
 var lastScrollHeight = 0;
 function scroll() {
 	sh = prt.scrollHeight;
-	console.log(prt)
 	if (sh < lastScrollHeight) {
 		mult += 0.001;
 	}
@@ -169,7 +185,6 @@ function increment() {
 	// multSlider.elt.value = parseFloat(mult.toFixed(2));
 	// multIn.elt.value = parseFloat(mult.toFixed(2)).toString();
 	drawLines();
-	//console.log(mult);
 	}
 }
 function decrement() {
