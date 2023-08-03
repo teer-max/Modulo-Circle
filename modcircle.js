@@ -139,7 +139,7 @@ function drawLines() {
 	strokeWeight(2);
 	stroke(0);
 	textSize(18);
-	modtext = text("Modulus (remainder)",MAXW*0.77, MAXH*0.15, MAXW*0.95, MAXH*0.5);
+	modtext = text("Total Points (Divisor)",MAXW*0.77, MAXH*0.15, MAXW*0.95, MAXH*0.5);
 	multtext = text("Multiplier (defines map)", MAXW*0.77, MAXH*0.3,MAXW*0.95,MAXH*0.35);
 	pop();
 }
